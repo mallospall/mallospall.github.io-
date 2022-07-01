@@ -1,0 +1,128 @@
+*,
+::before,
+::after {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Montserrat', sans-serif;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3{
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: gray;
+}
+
+.header_logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    grid-gap: 20px;
+}
+
+.hero_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero_title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero_subtitle {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.hero_links {
+    display: flex;
+}
+
+.hero_link {
+    margin-right: 10px;
+    font-size: 30px;
+    color: black;
+    transition: color 0,3s;
+}
+
+.hero_link::hover {
+    color: aqua;
+}
+
+.hero_box {
+    max-width: 500px;
+    justify-self: center;
+    overflow: hidden;
+    border: 10px solid white;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: ava-animate 5s infinite alternate;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+}
+
+@keyframes ava-animate {
+    0% {
+        border-radius: 49% 36% 54% 30% / 44% 14% 61% 10% ;
+    }
+    40$ {
+        border-radius: 27% 46% 0% 30% / 74% 42% 61% 36% ;
+    }
+    60% {
+        border-radius: 27% 73% 27% 73% / 31% 39% 61% 70% ;
+    }
+    100%% {
+        border-radius: 82% 73% 27% 73% / 91% 39% 61% 70% ;
+    }
+}
+
+@keyframes ava-bg {
+    from {
+        backgrop-filter hue-rotate(0);
+    }
+
+    to {
+        backgrop-filter: hue-rotate(90deg)
+    }
+}
+
+.hero_box-img {
+    animation ava-bg 3s infinite alternate;
+}
